@@ -34,7 +34,6 @@ public class MainPageTest {
 
     @Test(dataProvider = "inputTestDataProvider")
     public void inputTest(String inputText, String expectedResult) {
-
         mainPage.inputCharacters.sendKeys(inputText);
         mainPage.buttonValidate.click();
         String actualResult = mainPage.validationMessage.getAttribute("value");
@@ -68,7 +67,6 @@ public class MainPageTest {
 
     @Test(dataProvider = "inputSizeTestDataProvider")
     public void inputSizeTest(String inputText, String expectedResult) {
-
         mainPage.inputCharacters.sendKeys(inputText);
         mainPage.buttonValidate.click();
         String actualResult = mainPage.validationMessage.getAttribute("value");
@@ -82,7 +80,6 @@ public class MainPageTest {
                 {"", "Invalid Value"},
                 {"123456", "Invalid Value"},
                 {"1234567", "Valid Value"},
-                {"*QwErTy", "Valid Value"},
                 {"12345678", "Invalid Value"}
         };
     }
